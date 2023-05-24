@@ -5,6 +5,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class InsightsPage extends OpenLendingHomePage{
 
-    @FindBy(linkText = "Insights")
-    public WebElement InsightsLink;
+    @FindBy(linkText = "Read More")
+    public WebElement ReadMoreLink;
 }

@@ -5,6 +5,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class InsightsPage extends OpenLendingHomePage{
 
-    @FindBy(linkText = "Read More")
+    @FindBy(xpath = "//a[@class='outline-primary-link']")
     public WebElement ReadMoreLink;
 }

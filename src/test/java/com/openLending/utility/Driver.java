@@ -12,17 +12,15 @@ public class Driver {
 
     public static WebDriver getDriver(){
         if(driverPool.get()==null){
-            String browser= System.getProperty("browser") !=null ? browser=System.getProperty("browser"):ConfigReader.getProperty("browser");
+            String browser= System.getProperty("browser") !=null ? System.getProperty("browser"):ConfigReader.getProperty("browser");
 
             switch (browser){
                 case "chrome":
                     ChromeOptions options=new ChromeOptions();
-                   // WebDriverManager.chromedriver().setup();
                     options.addArguments("--remote-allow-origins=*");
                     driverPool.set(new ChromeDriver(options));
                     break;
                 case "firefox":
-                    //WebDriverManager.firefoxdriver().setup();
                     driverPool.set(new FirefoxDriver());
             }
 

@@ -12,4 +12,7 @@ public class GoogleSearchPage {
 
     @FindBy(name = "q")
     public WebElement searchBar;
+
+    @FindBy(xpath = "(//img[@class='XNo5Ab'])[1]")
+    public WebElement OpenLendingImage;
 }

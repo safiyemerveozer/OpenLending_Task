@@ -8,6 +8,7 @@ import com.openLending.utility.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 
 public class us01_StepDefinition extends OpenLendingHomePage {
@@ -28,6 +29,7 @@ public class us01_StepDefinition extends OpenLendingHomePage {
     @Given("user click Automated Lending Platform | Open Lending | United States image")
     public void user_click_automated_lending_platform_open_lending_united_states_image() {
         googleSearchPage.OpenLendingImage.click();
+        Driver.getDriver().findElement(By.xpath("//button[@class='cmplz-btn cmplz-accept']")).click();
     }
     @Given("user click Resources on the top bar")
     public void user_click_resources_on_the_top_bar() {
